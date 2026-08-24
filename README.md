@@ -1,17 +1,19 @@
-# KLH-CSE-2025-26-Team17-Stock-Market-Data-Pipeline
+KLH-CSE-2025-26-Team17-Stock-Market-Data-Pipeline
 # Project Title
 
 ## Team Members
-- Name – ID Number
+- J.Kumudavalli-2420030592
+- G.Rithwik-2420030415
+- T.Ram Tejaswi Reddy-2420090113
 
 ## Supervisor
-Supervisor Name
+DR.Nalla Shirisha
 
 ## Abstract
-Brief description of the project will be added here.
+Add Review 1 project deliverable
 
-## Setup and Execution
-Instructions will be added here.
+
+
 
 ## Current Phase Status
 Phase 1 – In Progress
