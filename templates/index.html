@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stock Market Data Pipeline</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>Stock Market Data Pipeline</h1>
+
+        <p>
+            Automated stock data collection,
+            cleaning, transformation and visualization
+        </p>
+
+    </header>
+
+
+    <section class="controls">
+
+        <input
+            type="text"
+            id="symbol"
+            value="RELIANCE.NS"
+            placeholder="Enter stock symbol"
+        >
+
+        <select id="period">
+
+            <option value="1mo">
+                1 Month
+            </option>
+
+            <option value="3mo">
+                3 Months
+            </option>
+
+            <option value="6mo">
+                6 Months
+            </option>
+
+            <option value="1y" selected>
+                1 Year
+            </option>
+
+            <option value="2y">
+                2 Years
+            </option>
+
+        </select>
+
+        <button onclick="runPipeline()">
+            Run Pipeline
+        </button>
+
+    </section>
+
+
+    <section class="metrics">
+
+        <div class="card">
+
+            <h3>Stock</h3>
+
+            <p id="stockName">-</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Latest Price</h3>
+
+            <p id="latestPrice">-</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Daily Change</h3>
+
+            <p id="change">-</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Records</h3>
+
+            <p id="records">-</p>
+
+        </div>
+
+    </section>
+
+
+    <section class="pipeline">
+
+        <h2>Pipeline Stages</h2>
+
+        <div class="stages">
+
+            <div>1. Data Collection</div>
+
+            <div>2. Data Cleaning</div>
+
+            <div>3. Data Transformation</div>
+
+            <div>4. Data Storage</div>
+
+            <div>5. Data Analysis</div>
+
+            <div>6. Visualization</div>
+
+        </div>
+
+    </section>
+
+
+    <section class="chart-section">
+
+        <h2>Stock Price Chart</h2>
+
+        <canvas id="stockChart"></canvas>
+
+    </section>
+
+
+    <section class="quality">
+
+        <h2>Data Quality</h2>
+
+        <p>
+            Missing Values:
+            <strong id="missing">-</strong>
+        </p>
+
+        <p>
+            Duplicate Rows:
+            <strong id="duplicates">-</strong>
+        </p>
+
+    </section>
+
+
+    <section class="latest">
+
+        <h2>Latest Market Data</h2>
+
+        <div id="latestData">
+            Loading...
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+
+</html>
